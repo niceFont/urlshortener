@@ -45,5 +45,4 @@ module.exports = {
             throw err
         }
     }
-
 }

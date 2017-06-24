@@ -1,6 +1,5 @@
-require("dotenv").config();
+require("dotenv").config(); //import .env Variables
 const app = require("express")();
-const bodyParser = require("body-parser");
 const port = process.env.PORT || 1000;
 const { POST } = require("./ApiRequests");
 
