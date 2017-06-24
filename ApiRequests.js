@@ -28,7 +28,7 @@ const postRequest = (url) => {
 
         })
 
-        request.write(JSON.stringify({ longUrl: 'https://nodejs.org/api/http.html#http_http_request_options_callback' }));
+        request.write(JSON.stringify({ longUrl: url }));
         request.end()
 
 
