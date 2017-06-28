@@ -4,10 +4,11 @@ const port = process.env.PORT || 1000;
 const { POST } = require("./ApiRequests");
 
 
-app.get("/", (request, response) => {
-    console.log(request.query.url)
-    if (request.query.url !== undefined) {
-        POST(request.query.url)
+app.get("*", (request, response) => {
+
+    if (request.url !== "undefined") {
+        let url = request.url.split("").slice(1, request.url.length).join("")
+        POST(url)
             .then((data) => {
                 console.log(data)
                 return response.send(data)
